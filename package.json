@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@elysiajs/swagger": "^1.2.2",
-    "@lami/x-client-transaction-id": "npm:@jsr/lami__x-client-transaction-id",
+    "@lami/x-client-transaction-id": "^0.1.4",
     "elysia": "latest"
   },
   "devDependencies": {
