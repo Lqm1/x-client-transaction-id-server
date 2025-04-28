@@ -66,6 +66,34 @@ GET /x-client-transaction-id?method=GET&pathname=/graphql/UserByScreenName
 
 Swagger documentation is available at http://localhost:3000/swagger when the server is running.
 
+## Docker Deployment
+
+You can easily deploy this service using Docker with the pre-built image from GitHub Container Registry (ghcr.io).
+
+### Pull and Run the Docker Image
+
+```bash
+# Pull the latest image
+docker pull ghcr.io/lqm1/x-client-transaction-id-server:master
+
+# Run the container
+docker run -d --name x-client-transaction-id-server -p 3000:3000 ghcr.io/lqm1/x-client-transaction-id-server:master
+```
+
+The server will be available at http://localhost:3000/
+
+### Build Your Own Docker Image
+
+Alternatively, you can build the Docker image yourself:
+
+```bash
+# Build the Docker image
+docker build -t x-client-transaction-id-server .
+
+# Run the container
+docker run -d --name x-client-transaction-id-server -p 3000:3000 x-client-transaction-id-server
+```
+
 ## License
 
 MIT
