@@ -1,11 +1,14 @@
 {
   "name": "app",
   "version": "1.0.50",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
+    "@elysiajs/swagger": "^1.2.2",
+    "@lami/x-client-transaction-id": "npm:@jsr/lami__x-client-transaction-id",
     "elysia": "latest"
   },
   "devDependencies": {
