@@ -37,6 +37,9 @@ app.get(
         ],
       }),
     }),
+    response: t.Object({
+      "x-client-transaction-id": t.String(),
+    }),
   }
 );
 
