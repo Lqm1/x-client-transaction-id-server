@@ -1,15 +1,71 @@
-# Elysia with Bun runtime
+# X-Client-Transaction-ID Server
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
+A simple API server built with Elysia and Bun runtime that generates transaction IDs for client requests. This service provides a single endpoint that returns a unique transaction ID based on HTTP method and pathname parameters.
+
+## Features
+
+- Generates unique transaction IDs for client requests
+- Built with Elysia framework and Bun runtime
+- Includes Swagger documentation for API exploration
+
+## Prerequisites
+
+- [Bun](https://bun.sh) installed on your system
+
+## Installation
+
+Clone this repository and install dependencies:
+
 ```bash
-bun create elysia ./elysia-example
+# Clone the repository
+git clone https://github.com/Lqm1/x-client-transaction-id-server.git
+cd x-client-transaction-id-server
+
+# Install dependencies
+bun install
 ```
 
 ## Development
-To start the development server run:
+
+Start the development server with hot reloading:
+
 ```bash
 bun run dev
 ```
 
-Open http://localhost:3000/ with your browser to see the result.
+The server will be available at http://localhost:3000/
+
+## API Usage
+
+### Generate a Transaction ID
+
+```
+GET /x-client-transaction-id?method=METHOD&pathname=PATHNAME
+```
+
+#### Query Parameters
+
+- `method`: HTTP method (e.g., GET, POST)
+- `pathname`: URL pathname (e.g., /graphql/UserTweets)
+
+#### Example Request
+
+```
+GET /x-client-transaction-id?method=GET&pathname=/graphql/UserByScreenName
+```
+
+#### Example Response
+
+```json
+{
+  "x-client-transaction-id": "generated-transaction-id-here"
+}
+```
+
+## API Documentation
+
+Swagger documentation is available at http://localhost:3000/swagger when the server is running.
+
+## License
+
+MIT
