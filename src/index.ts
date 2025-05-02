@@ -1,9 +1,6 @@
 import { Elysia, t } from "elysia";
 import { swagger } from "@elysiajs/swagger";
-import {
-  ClientTransaction,
-  handleXMigration,
-} from "@lami/x-client-transaction-id";
+import { ClientTransaction, handleXMigration } from "x-client-transaction-id";
 
 const document = await handleXMigration();
 const transaction = await ClientTransaction.create(document);
